@@ -1,5 +1,15 @@
 # Proyecto Final — Pipeline Híbrido Batch + Near Real-Time con ELK y Airflow
 
+> **English summary.** Hybrid batch + near-real-time data pipeline on Steam video-game data.
+> The batch layer (KNIME ETL into a PostgreSQL star schema) and the streaming layer (events from MySQL,
+> MongoDB, CSV files and Python sensors, shipped by Logstash into Elasticsearch) are connected by three
+> Apache Airflow DAGs: a daily KPI job, a 15-minute job that enriches Elasticsearch events with warehouse
+> data and reindexes them, and 30-minute data-quality checks. Results are shown in a Kibana dashboard.
+> **Stack:** Apache Airflow, Elasticsearch, Logstash, Kibana, PostgreSQL, MySQL, MongoDB, Python,
+> Docker Compose (9 services). Team project with Steeven Quezada, Data Engineering, MSc Data Science (USFQ).
+> The rest of this README is in Spanish.
+
+
 **Curso:** Ingeniería de Datos — USFQ
 **Autores:**
 - Máximo Pinta
